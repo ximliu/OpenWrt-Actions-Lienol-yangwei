@@ -82,28 +82,28 @@ CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 EOF
 
 # 多文件系统支持:
-# cat >> .config <<EOF
-# CONFIG_PACKAGE_kmod-fs-nfs=y
-# CONFIG_PACKAGE_kmod-fs-nfs-common=y
-# CONFIG_PACKAGE_kmod-fs-nfs-v3=y
-# CONFIG_PACKAGE_kmod-fs-nfs-v4=y
-# CONFIG_PACKAGE_kmod-fs-ntfs=y
-# CONFIG_PACKAGE_kmod-fs-squashfs=y
-# EOF
+cat >> .config <<EOF
+CONFIG_PACKAGE_kmod-fs-nfs=y
+CONFIG_PACKAGE_kmod-fs-nfs-common=y
+CONFIG_PACKAGE_kmod-fs-nfs-v3=y
+CONFIG_PACKAGE_kmod-fs-nfs-v4=y
+CONFIG_PACKAGE_kmod-fs-ntfs=y
+CONFIG_PACKAGE_kmod-fs-squashfs=y
+EOF
 
 # USB3.0支持:
-# cat >> .config <<EOF
-# CONFIG_PACKAGE_kmod-usb-ohci=y
-# CONFIG_PACKAGE_kmod-usb-ohci-pci=y
-# CONFIG_PACKAGE_kmod-usb2=y
-# CONFIG_PACKAGE_kmod-usb2-pci=y
-# CONFIG_PACKAGE_kmod-usb3=y
-# EOF
+cat >> .config <<EOF
+CONFIG_PACKAGE_kmod-usb-ohci=y
+CONFIG_PACKAGE_kmod-usb-ohci-pci=y
+CONFIG_PACKAGE_kmod-usb2=y
+CONFIG_PACKAGE_kmod-usb2-pci=y
+CONFIG_PACKAGE_kmod-usb3=y
+EOF
 
 # 第三方插件选择:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-serverchan=y #微信推送
-# CONFIG_PACKAGE_luci-app-smartinfo=y #磁盘健康监控
+CONFIG_PACKAGE_luci-app-smartinfo=y #磁盘健康监控
 EOF
 
 # Passwall插件:
@@ -138,14 +138,14 @@ EOF
 
 # 常用LuCI插件(禁用):
 cat >> .config <<EOF
-# CONFIG_PACKAGE_luci-app-smartdns is not set #smartdnsDNS服务
-# CONFIG_PACKAGE_luci-app-adguardhome is not set #ADguardHome去广告服务
-# CONFIG_PACKAGE_luci-app-pppoe-relay is not set #PPPoE穿透
-# CONFIG_PACKAGE_luci-app-pppoe-server is not set #PPPoE服务器
-# CONFIG_PACKAGE_luci-app-trojan-server is not set #Trojan服务器
-# CONFIG_PACKAGE_luci-app-v2ray-server is not set #V2ray服务器
-# CONFIG_PACKAGE_luci-app-pptp-vpnserver-manyusers is not set #PPTP VPN 服务器
-# CONFIG_PACKAGE_luci-app-hd-idle is not set #磁盘休眠
+CONFIG_PACKAGE_luci-app-smartdns=y #smartdnsDNS服务
+CONFIG_PACKAGE_luci-app-adguardhome=y #ADguardHome去广告服务
+CONFIG_PACKAGE_luci-app-pppoe-relay=y #PPPoE穿透
+CONFIG_PACKAGE_luci-app-pppoe-server=y #PPPoE服务器
+CONFIG_PACKAGE_luci-app-trojan-server=y #Trojan服务器
+CONFIG_PACKAGE_luci-app-v2ray-server=y #V2ray服务器
+CONFIG_PACKAGE_luci-app-pptp-vpnserver-manyusers=y #PPTP VPN 服务器
+CONFIG_PACKAGE_luci-app-hd-idle=y #磁盘休眠
 EOF
 
 # 常用LuCI插件(启用):
@@ -174,11 +174,11 @@ EOF
 
 # 网络共享:
 cat >> .config <<EOF
-# CONFIG_PACKAGE_luci-app-fileassistant is not set #文件助手
-# CONFIG_PACKAGE_luci-app-vsftpd is not set #FTP 服务器
-# CONFIG_PACKAGE_luci-app-samba is not set #网络共享
-# CONFIG_PACKAGE_autosamba is not set #网络共享
-# CONFIG_PACKAGE_samba36-server is not set #网络共享
+CONFIG_PACKAGE_luci-app-fileassistant is not set #文件助手
+CONFIG_PACKAGE_luci-app-vsftpd is not set #FTP 服务器
+CONFIG_PACKAGE_luci-app-samba is not set #网络共享
+CONFIG_PACKAGE_autosamba is not set #网络共享
+CONFIG_PACKAGE_samba36-server is not set #网络共享
 EOF
 
 # LuCI主题:
