@@ -13,6 +13,9 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 # 添加第三方软件包
 git clone https://github.com/KFERMercer/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/kang-mk/luci-app-smartinfo package/luci-app-smartinfo
+git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git
+git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo
+git clone https://github.com/Leo-Jo-My/luci-theme-leo.git
 
 #创建自定义配置文件 - OpenWrt-x86-64
 
@@ -146,6 +149,7 @@ CONFIG_PACKAGE_luci-app-trojan-server=y #Trojan服务器
 CONFIG_PACKAGE_luci-app-v2ray-server=y #V2ray服务器
 CONFIG_PACKAGE_luci-app-pptp-vpnserver-manyusers=y #PPTP VPN 服务器
 CONFIG_PACKAGE_luci-app-hd-idle=y #磁盘休眠
+CONFIG_PACKAGE_luci-app-ssr-plus-Jo
 EOF
 
 # 常用LuCI插件(启用):
@@ -174,11 +178,11 @@ EOF
 
 # 网络共享:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-fileassistant is not set #文件助手
-CONFIG_PACKAGE_luci-app-vsftpd is not set #FTP 服务器
-CONFIG_PACKAGE_luci-app-samba is not set #网络共享
-CONFIG_PACKAGE_autosamba is not set #网络共享
-CONFIG_PACKAGE_samba36-server is not set #网络共享
+CONFIG_PACKAGE_luci-app-fileassistant=y #文件助手
+CONFIG_PACKAGE_luci-app-vsftpd=y #FTP 服务器
+CONFIG_PACKAGE_luci-app-samba=y #网络共享
+CONFIG_PACKAGE_autosamba=y #网络共享
+CONFIG_PACKAGE_samba36-server=y #网络共享
 EOF
 
 # LuCI主题:
@@ -187,6 +191,8 @@ CONFIG_PACKAGE_luci-theme-darkmatter=y
 CONFIG_PACKAGE_luci-theme-bootstrap-mod=y
 CONFIG_PACKAGE_luci-theme-netgear-mc=y
 CONFIG_PACKAGE_luci-theme-argon-mod=y
+CONFIG_PACKAGE_luci-theme-opentomcat=y
+CONFIG_PACKAGE_luci-theme-leo=y
 EOF
 
 # 常用软件包:
@@ -194,9 +200,9 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_curl=y
 CONFIG_PACKAGE_htop=y
 CONFIG_PACKAGE_nano=y
-# CONFIG_PACKAGE_screen=y
-# CONFIG_PACKAGE_tree=y
-# CONFIG_PACKAGE_vim-fuller=y
+CONFIG_PACKAGE_screen=y
+CONFIG_PACKAGE_tree=y
+CONFIG_PACKAGE_vim-fuller=y
 CONFIG_PACKAGE_wget=y
 EOF
 
