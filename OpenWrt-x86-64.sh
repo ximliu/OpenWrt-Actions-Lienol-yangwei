@@ -13,11 +13,11 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 # 添加第三方软件包
 git clone https://github.com/KFERMercer/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/kang-mk/luci-app-smartinfo package/luci-app-smartinfo
-git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git
-git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo
-git clone https://github.com/Leo-Jo-My/luci-theme-leo.git
-git clone https://github.com/Aslin-Ameng/luci-theme-Night.git
-git clone https://github.com/Aslin-Ameng/luci-theme-Light.git
+git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
+git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo package/my/luci-app-ssr-plus-Jo
+git clone https://github.com/Leo-Jo-My/luci-theme-leo.git package/luci-theme-leo
+git clone https://github.com/Aslin-Ameng/luci-theme-Night.git package/luci-theme-Night
+git clone https://github.com/Aslin-Ameng/luci-theme-Light.git package/luci-theme-Light
 
 #创建自定义配置文件 - OpenWrt-x86-64
 
