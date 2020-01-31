@@ -14,9 +14,9 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 git clone https://github.com/KFERMercer/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/kang-mk/luci-app-smartinfo package/luci-app-smartinfo
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
-git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo package/luci-app-ssr-plus-Jo
 git clone https://github.com/Leo-Jo-My/luci-theme-leo.git package/luci-theme-leo
 git clone https://github.com/Aslin-Ameng/luci-theme-Light.git package/luci-theme-Light
+git clone https://github.com/Flowers-in-thorns/luci-app-vssr-coexist.git package/luci-app-vssr-coexist
 
 #创建自定义配置文件 - 树莓派3b+
 
@@ -150,7 +150,7 @@ CONFIG_PACKAGE_luci-app-trojan-server=y #Trojan服务器
 CONFIG_PACKAGE_luci-app-v2ray-server=y #V2ray服务器
 CONFIG_PACKAGE_luci-app-pptp-vpnserver-manyusers=y #PPTP VPN 服务器
 CONFIG_PACKAGE_luci-app-hd-idle=y #磁盘休眠
-CONFIG_PACKAGE_luci-app-ssr-plus-Jo
+CONFIG_PACKAGE_luci-app-vssr-coexist=y #兼容魔改和lean原版
 EOF
 
 # 常用LuCI插件(启用):
