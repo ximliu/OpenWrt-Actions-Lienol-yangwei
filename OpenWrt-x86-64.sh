@@ -14,10 +14,10 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 git clone https://github.com/KFERMercer/luci-app-serverchan package/luci-app-serverchan
 git clone https://github.com/kang-mk/luci-app-smartinfo package/luci-app-smartinfo
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
-git clone https://github.com/Leo-Jo-My/luci-app-ssr-plus-Jo package/my/luci-app-ssr-plus-Jo
 git clone https://github.com/Leo-Jo-My/luci-theme-leo.git package/luci-theme-leo
 git clone https://github.com/Aslin-Ameng/luci-theme-Night.git package/luci-theme-Night
 git clone https://github.com/Aslin-Ameng/luci-theme-Light.git package/luci-theme-Light
+git clone https://github.com/Flowers-in-thorns/luci-app-vssr-coexist.git
 
 #创建自定义配置文件 - OpenWrt-x86-64
 
@@ -174,7 +174,7 @@ CONFIG_PACKAGE_luci-app-control-timewol=y #定时唤醒
 CONFIG_PACKAGE_luci-app-control-webrestriction=y #访问限制
 CONFIG_PACKAGE_luci-app-control-weburl=y #网址过滤
 CONFIG_PACKAGE_luci-app-flowoffload=y #Turbo ACC 网络加速
-CONFIG_PACKAGE_luci-app-ssr-plus-Jo=y
+CONFIG_PACKAGE_luci-app-vssr-coexist=y
 CONFIG_PACKAGE_luci-app-netdata=y
 CONFIG_PACKAGE_luci-app-mwan3helper=y
 EOF
