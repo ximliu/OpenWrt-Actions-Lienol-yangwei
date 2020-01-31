@@ -177,6 +177,8 @@ CONFIG_PACKAGE_luci-app-flowoffload=y #Turbo ACC 网络加速
 CONFIG_PACKAGE_luci-app-vssr-coexist=y #兼容魔改和lean原版
 CONFIG_PACKAGE_luci-app-netdata=y
 CONFIG_PACKAGE_luci-app-mwan3helper=y
+CONFIG_LUCI_LANG_zh-tw=y
+CONFIG_LUCI_LANG_en=y
 EOF
 
 # 网络共享:
