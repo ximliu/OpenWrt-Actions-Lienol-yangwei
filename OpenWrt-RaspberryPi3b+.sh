@@ -215,11 +215,6 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_autocore=y
 EOF
 
-# 取消编译VMware镜像: 
-cat >> .config <<EOF
-CONFIG_VMDK_IMAGES=y
-EOF
-
 # 
 # ========================固件定制部分结束========================
 # 
