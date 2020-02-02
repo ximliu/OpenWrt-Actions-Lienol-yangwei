@@ -218,6 +218,12 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_autocore=y
 EOF
 
+# 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
+cat >> .config <<EOF
+CONFIG_TARGET_IMAGES_PAD=y
+CONFIG_VMDK_IMAGES=y
+EOF
+
 # 
 # ========================固件定制部分结束========================
 # 
