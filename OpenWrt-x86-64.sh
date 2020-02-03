@@ -19,6 +19,12 @@ git clone https://github.com/Aslin-Ameng/luci-theme-Night.git package/luci-theme
 git clone https://github.com/Aslin-Ameng/luci-theme-Light.git package/luci-theme-Light
 git clone https://github.com/Flowers-in-thorns/luci-app-vssr-coexist.git package/luci-app-vssr-coexist
 
+# uci-app-dockerman && diskman
+git clone https://github.com/lisaac/luci-lib-docker.git package/luci-lib-docker
+git clone https://github.com/lisaac/luci-app-dockerman.git package/luci-app-dockerman
+git clone https://github.com/lisaac/luci-app-diskman package/luci-app-diskman
+mkdir -p package/parted && cp -i package/luci-app-diskman/Parted.Makefile package/parted/Makefile
+
 #创建自定义配置文件 - OpenWrt-x86-64
 
 rm -f ./.config*
@@ -176,7 +182,12 @@ CONFIG_PACKAGE_luci-app-control-weburl=y #网址过滤
 CONFIG_PACKAGE_luci-app-flowoffload=y #Turbo ACC 网络加速
 CONFIG_PACKAGE_luci-app-vssr-coexist=y #兼容魔改和lean原版
 CONFIG_PACKAGE_luci-app-netdata=y
-CONFIG_PACKAGE_luci-app-mwan3helper=y
+CONFIG_PACKAGE_luci-app-mwan3helper=y #分流
+CONFIG_PACKAGE_luci-app-zerotier=y #内网穿透
+CONFIG_PACKAGE_luci-app-acme=y
+CONFIG_PACKAGE_luci-app-docker=y
+CONFIG_PACKAGE_luci-app-dockerman=y
+CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_LUCI_LANG_zh-tw=y
 CONFIG_LUCI_LANG_en=y
 EOF
@@ -216,6 +227,12 @@ EOF
 # 其他软件包:
 cat >> .config <<EOF
 CONFIG_PACKAGE_autocore=y
+EOF
+
+# 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
+cat >> .config <<EOF
+CONFIG_TARGET_IMAGES_PAD=y
+CONFIG_VMDK_IMAGES=y
 EOF
 
 # 
