@@ -58,7 +58,7 @@ jobs:
     - name: 克隆源代码
       env: 
         REPO_URL: https://github.com/Lienol/openwrt
-        REPO_BRANCH: my-19.07-full
+        REPO_BRANCH: dev-19.07
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
 
     - name: 更新源
